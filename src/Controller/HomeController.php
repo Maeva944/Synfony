@@ -7,7 +7,7 @@ use Symfony\Component\HttpFoundation\Response;
 
 class HomeController extends AbstractController
 {
-    #[Route('/')]
+    #[Route('/', name:'home')]
     public function list(): Response
     {
         $home = [

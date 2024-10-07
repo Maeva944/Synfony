@@ -3,16 +3,53 @@
     <head>
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
-        <link rel="icon" href="assets/1.ico" type="image/x-icon">
+        <link rel="icon" href="{{ asset('images/1.ico') }}" type="image/x-icon">
         {% block stylesheets %}
-        <link rel="Stylesheet" href="assets/styles/app.css">
+        <link rel="Stylesheet" href="{{ ('asset/styles/app.css') }}">
         {% endblock %}
 
         {% block javascripts %}
             {% block importmap %}{{ importmap('app') }}{% endblock %}
         {% endblock %}
     </head>
+        <header>
+            <img src="{{ asset('images/1.ico') }}" alt="Logo du garage automoto">
+            <nav>
+                <a href="{{ path('home') }}">Accueil</a>
+                <a href="">Nos Services</a>
+                <a href="">À propos</a>
+                <a href="">Contact</a>
+                <a href="">Nos garages</a>
+            </nav>
+                <a href="" id="loging_admin">Se connecter</a>
+        </header>
     <body>
         {% block body %}{% endblock %}
     </body>
+        <footer>
+            <article>
+                <img src="{{ asset('images/logo_footer.png') }}" alt="Logo du garage automoto">
+            </article>
+            <article id="nav_footer">
+                <h4>Liens utiles</h4>
+                <a href="{{ path('home') }}">Accueil</a>
+                <a href="">Nos Services</a>
+                <a href="">À propos</a>
+                <a href="">Mention légale</a>
+            </article>
+            <article>
+                <h4>Contact</h4>
+                    <ul>
+                        <li>Mail: Contact@garageautomoto.fr</li>
+                        <li>Tel: 01 45 89 63 14</li>
+                        <li>Instagram : Auto_moto94</li>
+                    </ul>
+            </article>
+            <article id="nav_footer">
+                <h4>Localisation</h4>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10497.986285230185!2d2.37524861917356!3d48.86780953285426!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66d92d88ce347%3A0xb6fc1abf2c958433!2sAuto%20Moto%20Passion!5e0!3m2!1sfr!2sfr!4v1728297932636!5m2!1sfr!2sfr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </article>
+        </footer>
 </html>
+
+
