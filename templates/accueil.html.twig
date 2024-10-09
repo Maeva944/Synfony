@@ -1,1 +1,29 @@
 {% extends "base.html.twig" %}
+
+{% block body %}
+    <body>
+        <section>
+            <img src="{{ asset('images/motorbike-407186_1280.jpg') }}" alt="">
+            <h1>Garage en partenaire avec Yamaha et BMW</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tortor ipsum, sagittis et placerat sit amet.</p>
+        </section>
+        <section>
+            <h2>Nos services</h2>
+            <article>
+                <img src="{{ asset('images/examen-de-conduite.png') }}" alt="">
+                <h3>Controle technique AutoMoto</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tortor ipsum, sagittis et placerat sit amet, faucibus non mi. Suspendisse porta at lorem a egestas. Donec tristique mattis feugiat. Mauris magna libero,</p>
+            </article>
+            <article>
+                <img src="{{ asset('images/peinture.png') }}" alt="">
+                <h3>Covering</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tortor ipsum, sagittis et placerat sit amet, faucibus non mi. Suspendisse porta at lorem a egestas. Donec tristique mattis feugiat. Mauris magna libero,</p>
+            </article>
+            <article>
+                <img src="{{ asset('images/mecanique.png') }}" alt="">
+                <h3>Mécanique</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tortor ipsum, sagittis et placerat sit amet, faucibus non mi. Suspendisse porta at lorem a egestas. Donec tristique mattis feugiat. Mauris magna libero,</p>
+            </article>
+        </section>
+    </body>
+{% endblock %}

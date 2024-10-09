@@ -3,16 +3,18 @@
     margin: 0;
 }
 
-header{
+header {
     display: flex;
     position: fixed;
-    top : 0;
+    top: 0;
     z-index: 1000;
-    transition: top 0.3s ease;
+    transition: top 0.5s ease, transform 0.5s ease; /* On ajoute une transition sur le transform */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     width: 100%;
     align-items: center;
+    background-color: #fff;
 }
+
 
 header img{
     width: 6%;
@@ -42,16 +44,80 @@ header nav a, #loging_admin{
 #loging_admin:hover{
     box-shadow: 0 5px 7px rgba(0, 0, 0, 0.5);
 }
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Prend toute la hauteur de l'écran */
+    margin: 0;
+}
+
+section:first-of-type {
+    position: relative; /* Positionne le conteneur */
+    text-align: center; /* Centre le texte horizontalement */
+    background-color: black;
+}
+
+section:first-of-type img {
+    width: 100%; 
+    height: auto; 
+    opacity: 0.5;
+}
+
+section:first-of-type h1 {
+    position: absolute; /* Positionne le h1 par rapport au conteneur */
+    top: 50%; /* Position verticale centrée */
+    left: 50%; /* Position horizontale centrée */
+    transform: translate(-50%, -50%); /* Ajuste la position pour le centrer */
+    color: white; 
+    font-size: 4rem; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Ombre du texte pour une meilleure visibilité */
+}
+
+section:first-of-type p{
+    position: absolute; 
+    top: 60%; 
+    left: 60%; 
+    transform: translate(-75%, -30%); 
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+section:nth-child(3){
+    display: flex;
+    flex-wrap: wrap;
+    padding: 30px 0;
+    justify-content: center;
+}
+
+section:nth-child(3) h2{
+    padding-bottom: 40px;
+    text-align: center;
+    width: 100%;
+    font-size: 2.5rem;
+}
+section:nth-child(3) article{
+    width: 27%;
+}
+
+section:nth-child(3) article img{
+    width: 20%;
+}
+
+section:nth-child(3) article p{
+    width: 70%;
+}
+
 footer {
     background-color: #3A54B1;
-    position: fixed;
-    bottom: 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     width: 100%;
     padding: 15px 0;
+    position: relative; /* Le footer sera poussé en bas sans être collé */
 }
+
 footer article{
     width: 20%;
     display: flex;
